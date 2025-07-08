@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>🟢 WhatsApp Multi Sender</title>
+  <style>
+    body {
+      background: #111;
+      color: #0f0;
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    input, select, textarea, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+      background: #222;
+      border: 1px solid #0f0;
+      color: #0f0;
+    }
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>📤 WhatsApp Multi Account Sender</h2>
+
+  <form action="/start" method="post" enctype="multipart/form-data">
+    <label>Choose WhatsApp Session Folder (e.g., creds1):</label><br>
+    <input type="text" name="session" placeholder="creds1" required><br>
+
+    <label>Upload Numbers File (📂 numbers.txt):</label><br>
+    <input type="file" name="numbers" required><br>
+
+    <label>Upload Messages File (📂 sms.txt):</label><br>
+    <input type="file" name="sms" required><br>
+
+    <label>Delay Between Messages (in seconds):</label><br>
+    <input type="number" name="delay" value="2" min="1"><br>
+
+    <label>Stop Key (🛑 required to stop later):</label><br>
+    <input type="text" name="key" placeholder="e.g., tufan123" required><br>
+
+    <button type="submit">🚀 Start Sending</button>
+  </form>
+
+  <hr>
+
+  <form action="/stop" method="post">
+    <label>Enter Stop Key to End Messaging:</label><br>
+    <input type="text" name="key" required><br>
+    <button type="submit">🛑 STOP</button>
+  </form>
+
+  <hr>
+
+  <form action="/status" method="get">
+    <button type="submit">📊 Check Server Status</button>
+  </form>
+</body>
+</html>
