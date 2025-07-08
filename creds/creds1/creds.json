@@ -1,0 +1,20 @@
+{
+  "creds": {
+    "noiseKey": {},
+    "signedIdentityKey": {},
+    "signedPreKey": {},
+    "registrationId": 0,
+    "advSecretKey": "",
+    "processedHistoryMessages": [],
+    "accountSettings": {},
+    "deviceId": "creds1",
+    "phoneId": "",
+    "identityId": ""
+  },
+  "keys": {
+    "preKeys": {},
+    "sessions": {},
+    "senderKeys": {},
+    "appStateSyncKeys": {}
+  }
+}
